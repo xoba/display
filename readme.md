@@ -18,3 +18,19 @@ or
 or
 
     curl -X PUT http://localhost:8080/post?url=https://www.google.com/images/srpr/logo11w.png
+
+simply put, from a virgin system, you could just run this:
+
+    git clone git@github.com:xoba/display.git
+    cd display
+    ./run.sh &
+    xdg-open http://localhost:8080 &
+    curl -X PUT http://localhost:8080/post?url=https://www.google.com/images/srpr/logo11w.png
+    sleep 3
+    curl -X PUT http://localhost:8080/post?url=http://www.clipartsfree.net/svg/18177-tv-test-screen-download.svg
+    sleep 3
+    curl -X PUT http://localhost:8080/post?url=http://www.clipartsfree.net/svg/tv-testscreen_Clipart_svg_File.svg
+    sleep 3
+    curl -X POST http://localhost:8080/kill
+    
+    
