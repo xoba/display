@@ -24,7 +24,7 @@ simply put, from a virgin system, you could just run this:
     git clone git@github.com:xoba/display.git
     cd display
     ./run.sh &
-    # wait for log output from server before proceeding...
+    sleep 3 # just waiting for log output from server before proceeding...
     xdg-open http://localhost:8080 &
     curl -X PUT http://localhost:8080/post?url=https://www.google.com/images/srpr/logo11w.png
     sleep 3
