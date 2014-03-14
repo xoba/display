@@ -8,6 +8,7 @@ import (
 	"log"
 	"math/rand"
 	"net/http"
+	"os"
 	"runtime"
 	"sync"
 	"time"
@@ -52,6 +53,13 @@ func (h *Handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	switch r.URL.Path {
 	case "/":
 		serve("display.html")
+	case "/kill":
+		if r.Method == "POST" {
+			os.Exit(0)
+		} else {
+			http.Error(w, "need to POST", http.StatusMethodNotAllowed)
+		}
+
 	case "/display.js":
 		serve("display.js")
 	case "/ws.js":
