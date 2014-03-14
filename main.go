@@ -66,6 +66,8 @@ func (h *Handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		serve("reconnecting-websocket.js")
 	case "/jquery.js":
 		serve("jquery.js")
+	case "/jquery-2.0.3.min.map":
+		serve("jquery-2.0.3.min.map")
 	case "/display.css":
 		serve("display.css")
 	case "/ws":
