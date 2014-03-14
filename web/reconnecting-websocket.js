@@ -53,7 +53,7 @@ function ReconnectingWebSocket(url, protocols) {
     // These can be altered by calling code.
     this.debug = false;
     this.reconnectInterval = 1000;
-    this.timeoutInterval = 3000;
+    this.timeoutInterval = 2000;
 
     var self = this;
     var ws;
@@ -155,8 +155,8 @@ function ReconnectingWebSocket(url, protocols) {
     };
 
     this.close = function() {
+        forcedClose = true;
         if (ws) {
-            forcedClose = true;
             ws.close();
         }
     };

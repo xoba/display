@@ -63,9 +63,7 @@ func (h *Handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	case "/display.js":
 		serve("display.js")
 	case "/ws.js":
-		serve("ws.js")
-	case "/util.js":
-		serve("util.js")
+		serve("reconnecting-websocket.js")
 	case "/jquery.js":
 		serve("jquery.js")
 	case "/display.css":
