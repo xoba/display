@@ -18,11 +18,11 @@ func main() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
 	rand.Seed(time.Now().UTC().UnixNano())
 	log.SetFlags(log.Ldate | log.Ltime | log.Lmicroseconds | log.Lshortfile)
-
 	s := &http.Server{
 		Addr:    ":8080",
 		Handler: NewHandler(),
 	}
+	log.Printf("starting server...")
 	err := s.ListenAndServe()
 	if err != nil {
 		log.Printf("oops, exited with error: %v\n", err)
