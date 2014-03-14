@@ -19,7 +19,7 @@ or
 
     curl -X PUT http://localhost:8080/post?url=https://www.google.com/images/srpr/logo11w.png
 
-clicking anywhere on page will put browser into full-screen mode.
+clicking anywhere on page will put browser into full-screen mode. seems to work in chrome and firefox.
 
 simply put, from a virgin system, you could just run this:
 
